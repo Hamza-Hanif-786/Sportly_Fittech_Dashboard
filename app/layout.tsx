@@ -1,5 +1,7 @@
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import type { Metadata } from "next";
 import "./globals.css";
+import { AppSidebar } from "@/components/app-sidebar";
 
 export const metadata: Metadata = {
   title: "Admin Dashboard | Hage Architecture",
@@ -13,10 +15,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <SidebarProvider>
     <html lang="en">
       <body className='antialiased'>
+        <AppSidebar />
+        <SidebarTrigger />
         {children}
       </body>
     </html>
+    </SidebarProvider>
   );
 }
