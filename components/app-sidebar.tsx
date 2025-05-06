@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import {
   Sidebar,
@@ -10,51 +12,56 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import Link from "next/link"
-import Home from '@/public/icons/home.svg'
-import Message from "@/public/icons/message.svg"
-import Folder from "@/public/icons/folder.svg"
-import File from "@/public/icons/file.svg"
-import Setting from "@/public/icons/setting.svg"
-import UsersGroup from "@/public/icons/usergroup.svg"
+import { Icon } from '@iconify/react';
 import Logo from "@/public/logo.svg"
+import { usePathname } from "next/navigation"
 
 // Menu items.
 const items = [
   {
     title: "Dashboard",
     url: "/",
-    icon: Home,
+    icon: "mage:dashboard",
+    iconFill: "mage:dashboard-fill",
+
   },
   {
     title: "Messages",
     url: "/messages",
-    icon: Message,
+    icon: "mage:inbox",
+    iconFill: "mage:inbox-fill",
   },
   {
     title: "Projects",
     url: "/projects",
-    icon: Folder,
+    icon: "mage:folder-open",
+    iconFill: "mage:folder-open-fill",
   },
   {
     title: "Blogs",
     url: "/blogs",
-    icon: File,
+    icon: "mage:file-2",
+    iconFill: "mage:file-2-fill",
   },
   {
     title: "Services",
     url: "/services",
-    icon: Setting,
+    icon: "mage:settings",
+    iconFill: "mage:settings-fill",
   },
   {
     title: "Subscribers",
     url: "/subscribers",
-    icon: UsersGroup,
+    icon: "mage:users",
+    iconFill: "mage:users-fill",
   },
 ]
 
 export function AppSidebar() {
+  const pathname = usePathname();
+
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" variant="floating">
       <SidebarHeader className="bg-[#ECE5DE]">
         <SidebarMenu>
           <SidebarMenuItem className="p-3">
@@ -64,7 +71,6 @@ export function AppSidebar() {
                 alt="Logo"
                 width={80}
                 height={80}
-                className="object-cover"
               />
             </Link>
           </SidebarMenuItem>
@@ -73,17 +79,16 @@ export function AppSidebar() {
       <SidebarContent className="bg-[#ECE5DE]">
         <SidebarGroup>
           <SidebarGroupContent>
-            <SidebarMenu className="space-y-5">
+            <SidebarMenu className="space-y-1">
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
+                  <SidebarMenuButton 
+                    asChild
+                    size={"lg"}
+                    tooltip={item.title}
+                    className={`${pathname === item.url ? "bg-carot text-white" : ""} hover:bg-carot hover:text-white`}>
                     <Link href={item.url}>
-                      <Image
-                        src={item.icon}
-                        alt={item.title}
-                        width={30}
-                        height={30}
-                      />
+                      <Icon icon={item.icon} width={100} height={100} />
                       <span>{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
