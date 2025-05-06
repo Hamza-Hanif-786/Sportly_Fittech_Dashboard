@@ -61,7 +61,7 @@ export function AppSidebar() {
   const pathname = usePathname();
 
   return (
-    <Sidebar collapsible="icon" variant="floating">
+    <Sidebar>
       <SidebarHeader className="bg-[#ECE5DE]">
         <SidebarMenu>
           <SidebarMenuItem className="p-3">
@@ -86,10 +86,10 @@ export function AppSidebar() {
                     asChild
                     size={"lg"}
                     tooltip={item.title}
-                    className={`${pathname === item.url ? "bg-carot text-white" : ""} hover:bg-carot hover:text-white`}>
+                    className={`${pathname === item.url ? "bg-carot text-white" : ""} hover:bg-carot active:bg-carot hover:text-white h-auto [&>svg]:size-auto`}>
                     <Link href={item.url}>
-                      <Icon icon={item.icon} width={100} height={100} />
-                      <span>{item.title}</span>
+                      <Icon icon={item.icon} className="text-3xl" />
+                      <span className="font-['Inter'] font-medium text-lg">{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
