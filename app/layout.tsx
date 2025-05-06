@@ -19,9 +19,11 @@ export default function RootLayout({
     <html lang="en">
       <body className='antialiased'>
         <AppSidebar />
-        <div className="flex flex-col bg-[#71717125] w-full">
+        <div className="flex flex-col bg-[#71717118] w-full">
           <SidebarTrigger />
-          {children}
+          <div className="w-full px-7 py-5">
+            {children}
+          </div>
         </div>
       </body>
     </html>

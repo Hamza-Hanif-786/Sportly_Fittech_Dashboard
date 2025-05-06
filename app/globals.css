@@ -5,6 +5,7 @@
 
 @theme {
   --color-carot: oklch(0.63 0.1888 31.18);
+  --color-biscuit: oklch(0.93 0.0121 67.68);
 }
 
 @theme inline {

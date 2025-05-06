@@ -79,7 +79,7 @@ export function AppSidebar() {
       <SidebarContent className="bg-[#ECE5DE]">
         <SidebarGroup>
           <SidebarGroupContent>
-            <SidebarMenu className="space-y-1">
+            <SidebarMenu className="space-y-2">
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton 
@@ -88,7 +88,7 @@ export function AppSidebar() {
                     tooltip={item.title}
                     className={`${pathname === item.url ? "bg-carot text-white" : ""} hover:bg-carot active:bg-carot hover:text-white h-auto [&>svg]:size-auto`}>
                     <Link href={item.url}>
-                      <Icon icon={item.icon} className="text-3xl" />
+                      <Icon icon={pathname === item.url ? item.iconFill : item.icon} className="text-3xl" />
                       <span className="font-['Inter'] font-medium text-lg">{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
