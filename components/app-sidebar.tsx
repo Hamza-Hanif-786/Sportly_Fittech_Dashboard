@@ -1,20 +1,35 @@
 "use client"
 
 import Image from "next/image"
+import { 
+  Avatar, 
+  AvatarFallback, 
+  AvatarImage 
+} from "@/components/ui/avatar";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import {
   Sidebar,
   SidebarHeader,
+  SidebarFooter,
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar"
-import Link from "next/link"
+} from "@/components/ui/sidebar";
+import Link from "next/link";
 import { Icon } from '@iconify/react';
-import Logo from "@/public/logo.svg"
-import { usePathname } from "next/navigation"
+import Logo from "@/public/logo.svg";
+import avatarPic from "@/public/images/male1.webp"
+import { usePathname } from "next/navigation";
 
 // Menu items.
 const items = [
@@ -98,6 +113,34 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+      <SidebarFooter className="bg-[#ECE5DE]">
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center justify-between w-full py-3 px-2">
+                <div className="flex items-center gap-2">
+                  <Avatar className="size-10 rounded-lg">
+                    <AvatarImage src={avatarPic.src} alt="Avatar" />
+                    <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                  </Avatar>
+                  <div className="flex flex-col text-left">
+                    <span className="font-['Inter'] font-medium text-lg">Cynthia</span>
+                    <span className="font-['Inter'] font-normal text-sm text-gray-500">cynthia@gmail.com</span>
+                  </div>
+                </div>  
+                <Icon icon="mage:chevron-down" className="text-lg ml-2" />                
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56 bg-white rounded-lg shadow-lg p-2">
+                <DropdownMenuLabel>Account</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>Profile</DropdownMenuItem>
+                <DropdownMenuItem>Settings</DropdownMenuItem>
+                <DropdownMenuItem>Logout</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </SidebarMenuItem>
+        </SidebarMenu>
+      </SidebarFooter>
     </Sidebar>
   )
 }
