@@ -10,8 +10,6 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
@@ -117,7 +115,7 @@ export function AppSidebar() {
         <SidebarMenu>
           <SidebarMenuItem>
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center justify-between w-full py-3 px-2">
+              <DropdownMenuTrigger className="flex items-center justify-between w-full py-3 px-2 cursor-pointer">
                 <div className="flex items-center gap-2">
                   <Avatar className="size-10 rounded-lg">
                     <AvatarImage src={avatarPic.src} alt="Avatar" />
@@ -131,10 +129,7 @@ export function AppSidebar() {
                 <Icon icon="mage:chevron-down" className="text-lg ml-2" />                
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56 bg-white rounded-lg shadow-lg p-2">
-                <DropdownMenuLabel>Account</DropdownMenuLabel>
-                <DropdownMenuSeparator />
                 <DropdownMenuItem>Profile</DropdownMenuItem>
-                <DropdownMenuItem>Settings</DropdownMenuItem>
                 <DropdownMenuItem>Logout</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
