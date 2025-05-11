@@ -1,7 +1,8 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { SidebarProvider } from "@/components/ui/sidebar"
 import type { Metadata } from "next";
 import "./globals.css";
 import { AppSidebar } from "@/components/app-sidebar";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Admin Dashboard | Hage Architecture",
@@ -19,8 +20,8 @@ export default function RootLayout({
     <html lang="en">
       <body className='antialiased'>
         <AppSidebar />
-        <div className="flex flex-col bg-[#71717118] w-full">
-          <SidebarTrigger />
+        <div className="flex flex-col bg-[#71717115] w-full">
+          <Header />
           <div className="w-full px-7 py-5">
             {children}
           </div>
