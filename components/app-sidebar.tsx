@@ -22,6 +22,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarSeparator,
 } from "@/components/ui/sidebar";
 import Link from "next/link";
 import { Icon } from '@iconify/react';
@@ -75,7 +76,7 @@ export function AppSidebar() {
 
   return (
     <Sidebar>
-      <SidebarHeader className="bg-[#ECE5DE]">
+      <SidebarHeader className="bg-biscuit">
         <SidebarMenu>
           <SidebarMenuItem className="p-3">
             <Link href="/">
@@ -89,7 +90,7 @@ export function AppSidebar() {
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
-      <SidebarContent className="bg-[#ECE5DE]">
+      <SidebarContent className="bg-biscuit">
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu className="space-y-2">
@@ -111,7 +112,8 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter className="bg-[#ECE5DE]">
+      <SidebarSeparator />
+      <SidebarFooter className="bg-biscuit">
         <SidebarMenu>
           <SidebarMenuItem>
             <DropdownMenu>
