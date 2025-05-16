@@ -118,37 +118,37 @@
 }
 
 @font-face {
-  font-family: "Satoshi";
-  src: url("../public/fonts/Satoshi-Regular.otf") format("opentype");
+  font-family: "Galano Grotesque";
+  src: url("../public/fonts/Galano-Grotesque-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Satoshi";
-  src: url("../public/fonts/Satoshi-Medium.otf") format("opentype");
+  font-family: "Galano Grotesque";
+  src: url("../public/fonts/Galano-Grotesque-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Satoshi";
-  src: url("../public/fonts/Satoshi-Bold.otf") format("opentype");
+  font-family: "Galano Grotesque";
+  src: url("../public/fonts/Galano-Grotesque-Semi-Bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Galano Grotesque";
+  src: url("../public/fonts/Galano-Grotesque-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("../public/fonts/Inter-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../public/fonts/Inter-Regular.otf") format("opentype");
-  font-weight: 500;
+  font-family: "Galano Grotesque";
+  src: url("../public/fonts/Galano-Grotesque-Extra-Bold.otf") format("opentype");
+  font-weight: 800;
   font-style: normal;
 }
 
