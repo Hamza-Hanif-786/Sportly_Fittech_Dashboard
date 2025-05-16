@@ -5,9 +5,9 @@ import { AppSidebar } from "@/components/app-sidebar";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "Admin Dashboard | Hage Architecture",
-  description: "Manage your architecture projects efficiently with our admin dashboard.",
-  keywords: "admin, dashboard, architecture, projects, management",
+  title: "Sportly Fittech Dashboard",
+  description: "Monitor your fitness, health data, track your progress, challenges and achieve your fitness goals with our comprehensive dashboard.",
+  keywords: "fitness, health, dashboard, progress tracking, challenges, goals",
 };
 
 export default function RootLayout({
