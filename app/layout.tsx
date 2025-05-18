@@ -16,11 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='antialiased'>
-        <div className="flex flex-col bg-[#71717115] w-full">
-          <Header />
-          <div className="w-full px-7 py-5">
-            {children}
-          </div>
+        <Header />
+        <div className="w-full px-7 py-5 flex flex-col gap-5 bg-white">
+          {children}
         </div>
       </body>
     </html>
