@@ -1,4 +1,4 @@
-import StatsSection from '@/components/StatsSection';
+
 
 export default function Home() {
   return (
@@ -6,7 +6,6 @@ export default function Home() {
       <h1 className="text-5xl font-bold font-['Satoshi']">
         Dashboard
       </h1>
-      <StatsSection />
     </>
   );
 }
